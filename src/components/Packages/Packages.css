@@ -1,0 +1,538 @@
+/* =============================================
+Packages.css
+============================================= */
+
+.packages-section {
+background: var(--color-cream);
+padding: var(--sp-24) var(--sp-8);
+}
+
+.packages-container {
+max-width: 1200px;
+margin: 0 auto;
+}
+
+/* ---------------------------------------------
+Heading
+--------------------------------------------- */
+
+.section-heading {
+text-align: center;
+margin-bottom: var(--sp-16);
+}
+
+.section-heading__eyebrow {
+display: block;
+margin-bottom: var(--sp-3);
+
+font-family: var(--font-ui);
+font-size: var(--fs-xs);
+font-weight: 600;
+
+letter-spacing: 0.18em;
+text-transform: uppercase;
+
+color: var(--color-mid-gray);
+}
+
+.section-heading__title {
+font-family: var(--font-display);
+font-size: var(--fs-3xl);
+font-weight: 400;
+line-height: 1.2;
+
+color: var(--color-dark);
+margin: 0;
+}
+
+/* ---------------------------------------------
+Accordion Category
+--------------------------------------------- */
+
+.package-category {
+background: var(--color-white);
+border: 1px solid var(--color-border);
+margin-bottom: var(--sp-4);
+overflow: hidden;
+
+transition:
+transform var(--transition-base),
+box-shadow var(--transition-base);
+}
+
+.package-category:hover {
+transform: translateY(-2px);
+box-shadow: 0 10px 30px rgba(0,0,0,.05);
+}
+
+/* ---------------------------------------------
+Header
+--------------------------------------------- */
+
+.package-header {
+width: 100%;
+border: none;
+background: transparent;
+cursor: pointer;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+padding: var(--sp-6);
+
+font-family: var(--font-ui);
+font-size: var(--fs-base);
+font-weight: 600;
+
+color: var(--color-dark);
+
+transition: background var(--transition-base);
+}
+
+.package-header:hover {
+background: rgba(0,0,0,.02);
+}
+
+.package-icon {
+font-size: 1.5rem;
+font-weight: 300;
+color: var(--color-dark);
+}
+
+/* ---------------------------------------------
+Horizontal Scroll Cards
+--------------------------------------------- */
+
+.package-content {
+display: flex;
+gap: var(--sp-5);
+
+overflow-x: auto;
+overflow-y: hidden;
+
+scroll-behavior: smooth;
+
+padding: 0 var(--sp-6) var(--sp-6);
+
+scrollbar-width: thin;
+scrollbar-color: rgba(0,0,0,.2) transparent;
+}
+
+/* Chrome / Edge */
+
+.package-content::-webkit-scrollbar {
+height: 8px;
+}
+
+.package-content::-webkit-scrollbar-track {
+background: transparent;
+}
+
+.package-content::-webkit-scrollbar-thumb {
+background: rgba(0,0,0,.15);
+border-radius: 999px;
+}
+
+/* ---------------------------------------------
+Package Card
+--------------------------------------------- */
+
+.package-card {
+flex: 0 0 320px;
+
+border: 1px solid var(--color-border);
+background: var(--color-white);
+
+padding: var(--sp-6);
+
+transition:
+transform var(--transition-base),
+box-shadow var(--transition-base);
+}
+
+.package-card:hover {
+transform: translateY(-3px);
+box-shadow: 0 12px 28px rgba(0,0,0,.06);
+}
+
+.package-card__top {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: var(--sp-4);
+
+margin-bottom: var(--sp-4);
+}
+
+.package-card__top h3 {
+margin: 0;
+
+font-family: var(--font-display);
+font-size: var(--fs-lg);
+font-weight: 400;
+
+color: var(--color-dark);
+}
+
+.package-price {
+font-family: var(--font-ui);
+font-size: var(--fs-lg);
+font-weight: 700;
+
+color: var(--color-dark);
+
+white-space: nowrap;
+}
+
+/* ---------------------------------------------
+Features
+--------------------------------------------- */
+
+.package-features {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.package-features li {
+position: relative;
+
+padding-left: 22px;
+margin-bottom: var(--sp-2);
+
+font-family: var(--font-ui);
+font-size: var(--fs-sm);
+line-height: 1.8;
+
+color: var(--color-mid-gray);
+}
+
+.package-features li::before {
+content: "✓";
+
+position: absolute;
+left: 0;
+top: 0;
+
+color: var(--color-dark);
+font-weight: 700;
+}
+
+/* ---------------------------------------------
+Tablet
+--------------------------------------------- */
+
+@media (max-width: 1024px) {
+.packages-section {
+padding: var(--sp-20) var(--sp-6);
+}
+
+.section-heading__title {
+font-size: var(--fs-2xl);
+}
+
+.package-card {
+flex: 0 0 300px;
+}
+}
+
+/* ---------------------------------------------
+Mobile
+--------------------------------------------- */
+
+@media (max-width: 768px) {
+.packages-section {
+padding: var(--sp-16) var(--sp-6);
+}
+
+.package-header {
+padding: var(--sp-5);
+font-size: var(--fs-sm);
+}
+
+.package-content {
+padding: 0 var(--sp-5) var(--sp-5);
+}
+
+.package-card {
+flex: 0 0 260px;
+padding: var(--sp-5);
+}
+
+.package-card__top {
+flex-direction: column;
+align-items: flex-start;
+}
+
+.section-heading__title {
+font-size: var(--fs-2xl);
+}
+}
+
+/* ---------------------------------------------
+Small Mobile
+--------------------------------------------- */
+
+@media (max-width: 480px) {
+.packages-section {
+padding: var(--sp-12) var(--sp-5);
+}
+
+.section-heading {
+margin-bottom: var(--sp-10);
+}
+
+.section-heading__title {
+font-size: 1.75rem;
+}
+
+.package-header {
+padding: var(--sp-4);
+}
+
+.package-content {
+padding: 0 var(--sp-4) var(--sp-4);
+gap: var(--sp-3);
+}
+
+.package-card {
+flex: 0 0 220px;
+padding: var(--sp-4);
+}
+
+.package-card__top h3 {
+font-size: var(--fs-base);
+}
+
+.package-price {
+font-size: var(--fs-base);
+}
+}
+/* ---------------------------------------------
+Package Card - Premium Gold Style
+--------------------------------------------- */
+
+.package-card {
+flex: 0 0 340px;
+
+position: relative;
+
+background: linear-gradient(
+180deg,
+#ffffff 0%,
+#faf8f5 100%
+);
+
+border: 1px solid rgba(212, 175, 55, 0.25);
+
+padding: var(--sp-7);
+
+overflow: hidden;
+
+transition:
+transform var(--transition-base),
+box-shadow var(--transition-base),
+border-color var(--transition-base);
+}
+
+/* Gold top border */
+
+.package-card::before {
+content: "";
+
+position: absolute;
+top: 0;
+left: 0;
+
+width: 100%;
+height: 4px;
+
+background: var(--color-gold);
+
+transform: scaleX(0);
+transform-origin: left;
+
+transition: transform .35s ease;
+}
+
+.package-card:hover {
+transform: translateY(-6px);
+
+border-color: var(--color-gold);
+
+box-shadow:
+0 20px 40px rgba(212,175,55,.15);
+}
+
+.package-card:hover::before {
+transform: scaleX(1);
+}
+
+/* ---------------------------------------------
+Card Header
+--------------------------------------------- */
+
+.package-card__top {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+
+gap: var(--sp-3);
+
+margin-bottom: var(--sp-5);
+}
+
+.package-card__top h3 {
+margin: 0;
+
+font-family: var(--font-display);
+font-size: 1.5rem;
+font-weight: 400;
+
+color: var(--color-dark);
+}
+
+/* ---------------------------------------------
+Price Badge
+--------------------------------------------- */
+
+.package-price {
+display: inline-flex;
+align-items: center;
+
+padding: 8px 16px;
+
+background: var(--color-gold);
+color: white;
+
+border-radius: 999px;
+
+font-family: var(--font-ui);
+font-size: 1rem;
+font-weight: 700;
+
+letter-spacing: .03em;
+}
+
+/* ---------------------------------------------
+Features List
+--------------------------------------------- */
+
+.package-features {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.package-features li {
+position: relative;
+
+padding-left: 30px;
+margin-bottom: 14px;
+
+font-family: var(--font-ui);
+font-size: var(--fs-sm);
+line-height: 1.8;
+
+color: var(--color-mid-gray);
+}
+
+/* Gold Tick */
+
+.package-features li::before {
+content: "✓";
+
+position: absolute;
+left: 0;
+top: 4px;
+
+width: 18px;
+height: 18px;
+
+display: flex;
+align-items: center;
+justify-content: center;
+
+border-radius: 50%;
+
+background: var(--color-gold);
+color: white;
+
+font-size: 11px;
+font-weight: 700;
+}
+
+/* ---------------------------------------------
+Horizontal Scroll
+--------------------------------------------- */
+
+.package-content {
+display: flex;
+gap: var(--sp-5);
+
+overflow-x: auto;
+overflow-y: hidden;
+
+scroll-behavior: smooth;
+
+padding: 0 var(--sp-6) var(--sp-6);
+
+scrollbar-width: thin;
+scrollbar-color: rgba(212,175,55,.4) transparent;
+}
+
+.package-content::-webkit-scrollbar {
+height: 8px;
+}
+
+.package-content::-webkit-scrollbar-thumb {
+background: rgba(212,175,55,.4);
+border-radius: 999px;
+}
+
+/* ---------------------------------------------
+Tablet
+--------------------------------------------- */
+
+@media (max-width: 768px) {
+
+.package-card {
+flex: 0 0 290px;
+padding: var(--sp-5);
+}
+
+.package-card__top h3 {
+font-size: 1.25rem;
+}
+
+.package-price {
+font-size: .95rem;
+}
+}
+
+/* ---------------------------------------------
+Mobile
+--------------------------------------------- */
+
+@media (max-width: 480px) {
+
+.package-card {
+flex: 0 0 250px;
+padding: var(--sp-4);
+}
+
+.package-card__top h3 {
+font-size: 1.1rem;
+}
+
+.package-price {
+font-size: .9rem;
+padding: 6px 14px;
+}
+
+.package-features li {
+font-size: .85rem;
+line-height: 1.7;
+}
+}
