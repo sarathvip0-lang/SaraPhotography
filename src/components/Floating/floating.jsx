@@ -1,4 +1,4 @@
-import './floating.css'
+import './Floating.css'
 import { FaPhoneAlt, FaWhatsapp } from 'react-icons/fa'
 
 export default function Floating() {

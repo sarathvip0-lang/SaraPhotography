@@ -1,5 +1,5 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import './footer.css'
+import './Footer.css'
 import logo from '../../assets/logo.jpeg'
 
 const portfolioLinks = [

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import './Instagram.css';
+import './instagram.css';
 
 import gallery1 from '../../assets/gal1.jpg';
 import gallery2 from '../../assets/gal2.jpg';
