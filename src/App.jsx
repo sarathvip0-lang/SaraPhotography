@@ -7,12 +7,12 @@ import About from './components/About/About'
 import Gallery from './components/Gallery/Gallery'
 import Testimonials from './components/Testimonials/Testimonials'
 import Contact from './components/Contact/Contact'
-import Instagram from './components/instagram/Instagram'
+import NewInstagram from './components/instagram/NewInstagram'
 import FAQ from './components/FreequentQ/faq'
-import Footer from './components/footer/footer'
+import Footer from './components/Footer/footer'
 import Portfolio from './components/Portfolio/Portfolio'
 import ScrollToTop from './components/ScrollToTop'
-import Floating from './components/floating/floating'
+import Floating from './components/Floating/floating'
 import Packages from './components/Packages/Packages'
 
 import './App.css'
@@ -37,7 +37,7 @@ function Home() {
         <Team/>
       </section>
 
-      <Instagram />
+      <NewInstagram />
 
       <FAQ />
 
